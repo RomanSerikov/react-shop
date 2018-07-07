@@ -103,9 +103,63 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({4:[function(require,module,exports) {
+})({3:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Arithmetic = function () {
+  function Arithmetic() {
+    _classCallCheck(this, Arithmetic);
+  }
+
+  _createClass(Arithmetic, [{
+    key: "sum",
+    value: function sum(a, b) {
+      return a + b;
+    }
+  }, {
+    key: "diff",
+    value: function diff(a, b) {
+      return a - b;
+    }
+  }, {
+    key: "product",
+    value: function product(a, b) {
+      return a * b;
+    }
+  }, {
+    key: "quotient",
+    value: function quotient(a, b) {
+      return a / b;
+    }
+  }]);
+
+  return Arithmetic;
+}();
+
+exports.default = Arithmetic;
+},{}],2:[function(require,module,exports) {
+'use strict';
+
+var _arithmetic = require('./src/arithmetic');
+
+var _arithmetic2 = _interopRequireDefault(_arithmetic);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 console.log('Hello, Parcel!');
-},{}],6:[function(require,module,exports) {
+console.log(new _arithmetic2.default().sum(40, 2));
+console.log(new _arithmetic2.default().diff(40, 2));
+console.log(new _arithmetic2.default().product(40, 2));
+console.log(new _arithmetic2.default().quotient(40, 2));
+},{"./src/arithmetic":3}],4:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -134,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53190' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57491' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -275,5 +329,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[6,4], null)
+},{}]},{},[4,2], null)
 //# sourceMappingURL=/react-shop.55cbfe8a.map
