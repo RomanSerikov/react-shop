@@ -1,10 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './src/hello';
 import Arithmetic from './src/arithmetic';
+import Image from './src/Image';
+import TextBox from './src/TextBox';
+import ProductCard from './src/ProductCard';
+import Catalog from './src/Catalog';
+import { Products } from './src/constants/products';
+
+class App extends Component {
+  render () {
+    return (
+      <div>
+        <Image src='https://placeimg.com/300/200/tech' width='300' height='200' alt='I am placeholder' />
+        <TextBox>I am inside TextBox</TextBox>
+        <ProductCard
+          src='https://placeimg.com/300/200/tech'
+          width='300'
+          height='200'
+          alt='I am placeholder'
+          title='First product'
+          price='400'
+        />
+        <ProductCard
+          src='https://placeimg.com/300/200/tech'
+          width='300'
+          height='200'
+          alt='I am placeholder'
+          title='Second product'
+          price='500'
+        />
+        <ProductCard
+          src='https://placeimg.com/300/200/tech'
+          width='300'
+          height='200'
+          alt='I am placeholder'
+          title='Third product'
+          price='600'
+        />
+        <Catalog products={ Products } />
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(
-  <Hello />,
+  <App />,
   document.getElementById('root')
 );
 
