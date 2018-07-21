@@ -4,8 +4,7 @@ import Arithmetic from './src/arithmetic';
 import Image from './src/Image';
 import TextBox from './src/TextBox';
 import ProductCard from './src/ProductCard';
-import Catalog from './src/Catalog';
-import { Products } from './src/constants/products';
+import CatalogPage from './src/CatalogPage';
 
 class App extends Component {
   render () {
@@ -37,7 +36,7 @@ class App extends Component {
           title='Third product'
           price='600'
         />
-        <Catalog products={ Products } />
+        <CatalogPage />
       </div>
     );
   }
