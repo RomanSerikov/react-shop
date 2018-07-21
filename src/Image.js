@@ -3,7 +3,7 @@ import React from 'react';
 const Image = (props) => {
   const { src, width, height, alt } = props;
   return (
-    <img src={ src } width={ width } height={ height } alt={ alt } />
+    <img src={src} width={width} height={height} alt={alt} />
   );
 };
 

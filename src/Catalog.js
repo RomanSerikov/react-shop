@@ -4,21 +4,20 @@ import ProductCard from './ProductCard';
 class Catalog extends Component {
   render () {
     const products = this.props.products;
-    console.log(products)
-    const listItems = products.map((product) =>
-      <ProductCard
-        key={ product.id.toString() }
+    const redundant = products.map((product) =>
+      <li><ProductCard
+        key={ `${product.id}` }
         src={ product.imageUrl }
         width='300'
         height='200'
-        alt='I am placeholder'
+        alt={ product.title }
         title={ product.title }
         price={ product.price }
-      />
+      /></li>
     );
     return (
       <ul>
-        {listItems}
+        {redundant}
       </ul>
     );
   }
