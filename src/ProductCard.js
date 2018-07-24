@@ -5,12 +5,12 @@ import Price from './Price';
 
 class ProductCard extends Component {
   render() {
-    const { src, width, height, alt, title, price } = this.props;
+    const { imageUrl, title, price } = this.props.product;
     return (
       <div>
-        <Image src={ src } width={ width } height={ height } alt={ alt } />
-        <TextBox>{ title }</TextBox>
-        <Price>{ price }</Price>
+        <Image src={imageUrl} width='300' height='200' alt={title} />
+        <TextBox>{title}</TextBox>
+        <Price>{price}</Price>
       </div>
     );
   }
