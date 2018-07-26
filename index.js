@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './src/hello';
-import Arithmetic from './src/arithmetic';
+import CatalogPage from './src/CatalogPage';
+
+class App extends Component {
+  render () {
+    return (
+      <div>
+        <CatalogPage />
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(
-  <Hello />,
+  <App />,
   document.getElementById('root')
 );
-
-console.log(new Arithmetic().sum(40, 2));
-console.log(new Arithmetic().diff(40, 2));
-console.log(new Arithmetic().product(40, 2));
-console.log(new Arithmetic().quotient(40, 2));
